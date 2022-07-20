@@ -33,9 +33,6 @@
     align-items: center;
 }
 
-.Feed__Card__Top_Description {
-    width: 75%;
-}
 
 .Feed__Card__Top_Description_Text {
     font-size: 24px;
@@ -52,4 +49,93 @@
 
 .Feed__Card__PostedBy__Text {
     color: rgba(0, 0, 0, 0.5);
+}
+
+.Upvotes__List {
+    display: flex;
+    flex-direction: row;
+}
+
+.Upvotes__Avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: darkred;
+    width: 30px;
+    height: 30px;
+}
+
+.Upvotes__Item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Upvotes__NoVote {
+    margin-top: 20px;
+}
+
+.Upvotes__Pagination {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.Upvote__Modal__Bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Modal__Opened {
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color linear .5s;
+}
+
+.Modal__Upvotes {
+    border-radius: 15px;
+    background-color: #fff;
+    width: 500px;
+    height: 400px;
+    overflow: scroll;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    padding: 25px 20px 0 20px;
+}
+
+.Modal__Upvotes__Title {
+    font-size: 26px;
+    text-align: center;
+}
+
+.Modal__Upvotes__Item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    margin: 15px 0;
+}
+
+.Modal__Upvote__Like {
+    border-radius: 50%;
+    background: url("../images/like-active.svg") no-repeat center / 25px;
+}
+
+.Modal__Close {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.Modal__Close__Icon {
+    cursor: pointer;
+    background: url("../images/ic-close-blue.svg") no-repeat center / 15px;
 }
