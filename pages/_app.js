@@ -1,12 +1,12 @@
 import '../styles/globals.css'
-import {ApolloProvider} from "@apollo/client";
-import apolloConfig from "./config/apollo/apolloConfig";
+import {AuthProvider} from "./config/authConfig/authProvider";
 
 function MyApp({Component, pageProps}) {
+
     return (
-        <ApolloProvider client={apolloConfig}>
+        <AuthProvider>
             <Component {...pageProps} />
-        </ApolloProvider>
+        </AuthProvider>
     )
 }
 

@@ -139,3 +139,19 @@
     cursor: pointer;
     background: url("../images/ic-close-blue.svg") no-repeat center / 15px;
 }
+
+.Feed__SignOut {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 50px;
+    padding-top: 50px;
+}
+
+.Feed__SignOut__Btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 0 10px cadetblue;
+}
