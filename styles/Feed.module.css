@@ -83,7 +83,7 @@
     margin-left: 5px;
 }
 
-.Upvote__Modal__Bg {
+.Upvote__Modal__Bg, .Post__Modal__Bg {
     position: fixed;
     left: 0;
     top: 0;
@@ -96,7 +96,7 @@
     transition: background-color linear .5s;
 }
 
-.Modal__Upvotes {
+.Modal__Upvotes, .Post__Modal {
     border-radius: 15px;
     background-color: #fff;
     width: 500px;
@@ -154,4 +154,50 @@
     border-radius: 5px;
     font-size: 20px;
     box-shadow: 0 0 10px cadetblue;
+}
+
+.Post__Modal__Title__Text {
+    text-align: center;
+}
+
+.Post__Modal__Input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 0 0 0 20px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    border: none;
+    font-family: Verdana;
+}
+
+.Post__Modal__Input::placeholder {
+    font-family: Verdana;
+}
+
+.Textarea__Input {
+    resize: none;
+    padding-top: 20px;
+    height: 70px;
+}
+
+.Post__Modal__Input:focus {
+    outline: none;
+}
+
+.Post__Modal__Btn__Block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.Post__Modal__Btn__Submit {
+    cursor: pointer;
+    width: 50%;
+    height: 35px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    background-color: seagreen;
 }

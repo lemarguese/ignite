@@ -36,7 +36,7 @@ const Login = () => {
                            className={styles.Signup__Input}/>
                 </div>
                 <div className={styles.Signup__Button__Block}>
-                    <button type='submit' className={styles.Signup__Button}>Signup</button>
+                    <button type='submit' className={styles.Signup__Button}>Login</button>
                 </div>
             </form>
         </section>

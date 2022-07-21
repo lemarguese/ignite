@@ -52,7 +52,7 @@ export const Upvote = (props) => {
                         <section className={styles.Modal__Upvotes}>
                             <div className={styles.Modal__Close}>
                                 <img width='15px' height='15px' className={styles.Modal__Close__Icon}
-                                     onClick={modalCloseHandler}/>
+                                     onClick={modalCloseHandler} />
                             </div>
                             <div>
                                 <p className={styles.Modal__Upvotes__Title}>Users who upvoted

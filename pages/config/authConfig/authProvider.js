@@ -103,6 +103,22 @@ function useProvideAuth() {
         }
     }
 
+    const postNew = async ({url, description}) => {
+        const res = await client.mutate({
+            mutation: gql`
+                mutation post($url: String!, $description: String!){
+                     post(
+                          url: $url,
+                          description: $description
+                     ) {
+                          id
+                     }
+                }`,
+            variables: {url, description}
+        });
+        console.log(res);
+    }
+
     const getAuthToken = () => authToken
 
     return {
@@ -112,6 +128,7 @@ function useProvideAuth() {
         signIn,
         signUp,
         signOut,
+        postNew,
         createApolloClient,
     }
 }
