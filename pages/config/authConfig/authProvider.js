@@ -119,15 +119,15 @@ function useProvideAuth() {
         console.log(res);
     }
 
-    const upvote = async ({linkId}) => {
+    const upvote = async (linkId) => {
         const res = await client.mutate({
             mutation: gql`
-                mutation vote($linkId: String!) {
+                mutation vote($linkId: ID!) {
                     vote(linkId: $linkId) {
                         id
                     }
                 }`,
-            variables: {linkId}
+            variables: {linkId: linkId}
         });
         console.log(res);
     }

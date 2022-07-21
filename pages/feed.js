@@ -4,7 +4,7 @@ import styles from '../styles/Feed.module.css';
 import {UpvoteLayout} from "./partialComponents/UpvoteComponents";
 import {CardAvatar} from "./partialComponents/avatarComponents";
 import {useAuth} from "./config/authConfig/authProvider";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const Feed = () => {
     const {data} = useQuery(allQuery);
@@ -16,6 +16,10 @@ const Feed = () => {
         url: '',
         description: ''
     });
+
+    useEffect(() => {
+        console.log(data);
+    }, [data])
 
     const modalOpenHandler = () => {
         setTimeout(() => {
@@ -37,10 +41,7 @@ const Feed = () => {
     }
 
     const voteHandler = (e) => {
-        let obj = {
-            linkId: e.target.id
-        }
-        upvote(obj);
+        upvote(e.target.id);
     }
 
     return (
