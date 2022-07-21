@@ -119,6 +119,19 @@ function useProvideAuth() {
         console.log(res);
     }
 
+    const upvote = async ({linkId}) => {
+        const res = await client.mutate({
+            mutation: gql`
+                mutation vote($linkId: String!) {
+                    vote(linkId: $linkId) {
+                        id
+                    }
+                }`,
+            variables: {linkId}
+        });
+        console.log(res);
+    }
+
     const getAuthToken = () => authToken
 
     return {
@@ -129,6 +142,7 @@ function useProvideAuth() {
         signUp,
         signOut,
         postNew,
+        upvote,
         createApolloClient,
     }
 }

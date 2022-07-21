@@ -8,7 +8,7 @@ import {useState} from "react";
 
 const Feed = () => {
     const {data} = useQuery(allQuery);
-    const {signOut, getAuthToken, postNew} = useAuth();
+    const {signOut, getAuthToken, postNew, upvote} = useAuth();
     const token = getAuthToken();
     const [postModal, setPostModal] = useState(false);
 
@@ -36,6 +36,13 @@ const Feed = () => {
         });
     }
 
+    const voteHandler = (e) => {
+        let obj = {
+            linkId: e.target.id
+        }
+        upvote(obj);
+    }
+
     return (
         <>
             {
@@ -53,6 +60,8 @@ const Feed = () => {
                                         <UpvoteLayout votes={el.votes} id={el.id} description={el.description}/>
                                     </div>
                                     <div className={styles.Feed__Card__PostedBy}>
+                                        <img width='50px' height='50px' className={styles.Upvote__Btn} id={el.id}
+                                             onClick={voteHandler}/>
                                         <p className={styles.Feed__Card__PostedBy__Text}>Posted
                                             by {el.postedBy.name}</p>
                                     </div>
